@@ -332,6 +332,21 @@ var exchanges = [
     requires: ['key', 'secret', 'username'],
     providesHistory: false
   },
+  {
+    name: 'Zaif',
+    slug: 'zaif.jp',
+    direct: false,
+    infinityOrder: false,
+    currencies: ['JPY'],
+    assets: ['BTC'],
+    markets: [
+      {
+        pair: ['JPY', 'BTC'], minimalOrder: { amount: 0.01, unit: 'asset' }
+      }
+    ],
+    requires: ['key', 'secret'],
+    providesHistory: false
+  },
 ];
 
 module.exports = exchanges;
